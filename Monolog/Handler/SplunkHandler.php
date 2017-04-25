@@ -63,6 +63,7 @@ class SplunkHandler extends AbstractProcessingHandler
             }
 
             $params = [
+                'message' => $message,
                 'source'     => $this->source,
                 'sourcetype' => 'json_auto_timestamp',
                 'host'       => gethostname() ?: null,
@@ -71,7 +72,7 @@ class SplunkHandler extends AbstractProcessingHandler
             if(is_array($this->optionalParams)) $params = array_merge($this->optionalParams, $params);
 
             $splunkReceiver = $splunkService->getReceiver();
-            $result = $splunkReceiver->submit($message, $params);
+            $result = $splunkReceiver->attach($params); //, $params);
 
             return $result;
 
