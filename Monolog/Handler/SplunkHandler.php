@@ -63,7 +63,7 @@ class SplunkHandler extends AbstractProcessingHandler
             }
 
             $params = [
-                'source'     => $this->project,
+                'source'     => $this->source,
                 'sourcetype' => 'json_auto_timestamp',
                 'host'       => gethostname() ?: null,
             ];
