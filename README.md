@@ -3,6 +3,12 @@ Monolog Splunk Handler
 
 Simple monolog wrapper for the Easylo Splunk SDK.
 
+*Install*
+
+```shell
+composer require flyandi/monolog-splunk-handler
+```
+
 *How to use*
 
 ```php
