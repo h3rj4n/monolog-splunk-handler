@@ -1,0 +1,22 @@
+{
+    "name": "flyandi/monolog-splunk-handler",
+    "description": "Monolog Splunk Handler based on easylo wrapper",
+    "keywords": ["monolog", "splunk", "easylo"],
+    "license": "MIT",
+    "type": "bundle",
+    "authors": [
+        {
+            "name": "Andy Schwarz",
+            "email": "flyandi@yahoo.com"
+        }
+    ],
+    "require": {
+        "symfony/monolog-bundle": "*",
+        "ext-curl": "*",
+        "guzzle/guzzle": "~3.9",
+        "easylo/splunk-sdk": "1.*"
+    },
+    "autoload": {
+        "classmap": ["Monolog"]
+    }
+}
