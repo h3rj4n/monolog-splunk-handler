@@ -57,7 +57,10 @@ class SplunkHandler extends AbstractProcessingHandler
     {
         try {
             $splunkService = new \Splunk_Service($this->connectionParams);
-            $splunkService->login();
+
+            if(!isset($this->connectionParams['token'])) {
+                $splunkService->login();
+            }
 
             $params = [
                 'source'     => $this->project,
