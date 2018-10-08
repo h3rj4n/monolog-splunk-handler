@@ -10,11 +10,12 @@
             "email": "flyandi@yahoo.com"
         }
     ],
+    "prefer-stable": true,
     "require": {
         "symfony/monolog-bundle": "*",
         "ext-curl": "*",
-        "guzzle/guzzle": "~3.9",
-        "easylo/splunk-sdk": "1.*"
+        "easylo/splunk-sdk": "1.*",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "autoload": {
         "classmap": ["Monolog"]
